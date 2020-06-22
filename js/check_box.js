@@ -15,9 +15,8 @@ app.controller('CheckBoxCtroller', function($scope) {
             { "key": 3, "value": "预言家" },
             { "key": 4, "value": "皮匠" },
             { "key": 5, "value": "酒鬼" },
-            { "key": 6, "value": "女巫" },
-            { "key": 7, "value": "强盗" },
-            { "key": 8, "value": "村民" }
+            { "key": 6, "value": "强盗" },
+            { "key": 7, "value": "村民" }
         ];
 
         // This executes when entity in table is checked
