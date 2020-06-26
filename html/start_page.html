@@ -17,8 +17,33 @@
             <div class="cover-container">
 
                 <div class="inner cover">
-                    <h1>Choose Characters</h1>
+                    <h1>Choose from available characters</h1>
+
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" ng-model="model.allItemsSelected" ng-change="selectAll()"></th>
+                                <th>Available Characters</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="entity in model.entities" ng-class="{selected: entity.isChecked}">
+                                <td><input type="checkbox" ng-model="entity.isChecked" ng-change="selectEntity()"></td>
+                                <td>{{entity.value}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            
+                    <div>
+                        <button type="button" class="btn btn-outline-secondary" ng-click='countPlayer()'>Start</button>
+                    </div>
+
+                    <div>
+                        Required number of players: {{numPlayer}}
+                    </div>
+
                     <div class="container">
+                        <h2>Character descriptions</h2>
                     <div class="row">
                         <div class="card" style="width: 11rem;">
                             <img src="troublemaker.png" class="card-img-top" alt="...">
@@ -68,31 +93,6 @@
                             </div>
                         </div>
                     </div>
-                    </div>
-                    
-                    
-
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th><input type="checkbox" ng-model="model.allItemsSelected" ng-change="selectAll()"></th>
-                                <th>Available Characters</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="entity in model.entities" ng-class="{selected: entity.isChecked}">
-                                <td><input type="checkbox" ng-model="entity.isChecked" ng-change="selectEntity()"></td>
-                                <td>{{entity.value}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-            
-                    <div>
-                        <button type="button" class="btn btn-outline-secondary" ng-click='countPlayer()'>确定</button>
-                    </div>
-
-                    <div>
-                        Required number of players: {{numPlayer}}
                     </div>
                 </div>
   

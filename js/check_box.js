@@ -10,13 +10,13 @@ app.controller('CheckBoxCtroller', function($scope) {
 
         // Here first initialize all name list
         $scope.model.entities = [
-            { "key": 1, "value": "狼人" },
-            { "key": 2, "value": "狼人" },
-            { "key": 3, "value": "预言家" },
-            { "key": 4, "value": "皮匠" },
-            { "key": 5, "value": "酒鬼" },
-            { "key": 6, "value": "强盗" },
-            { "key": 7, "value": "村民" }
+            { "key": 1, "value": "Werewolf" },
+            { "key": 2, "value": "Werewolf" },
+            { "key": 3, "value": "Seer" },
+            { "key": 4, "value": "Troublemaker" },
+            { "key": 5, "value": "Drunk" },
+            { "key": 6, "value": "Robber" },
+            { "key": 7, "value": "Villager" }
         ];
 
         // This executes when entity in table is checked
